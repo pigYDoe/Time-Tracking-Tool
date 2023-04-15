@@ -4,8 +4,6 @@ import ezodf
 import json
 import os
 
-#ezodf.document.MIMETYPES.update({'.ods': 'application/vnd.oasis.opendocument.spreadsheet'})
-
 def load_config():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     config_path = os.path.join(script_dir, 'config.json')
