@@ -1,5 +1,5 @@
 # ⏲️Time-Tracking-Tool
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pigYDoe/Time-Tracking-Tool/blob/main/LICENSE)
 
 It's a simple time tracking tool for the purpose to clock in and out your working time.
 
