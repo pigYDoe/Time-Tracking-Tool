@@ -1,5 +1,5 @@
 # ⏲️Time-Tracking-Tool
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pigYDoe/Time-Tracking-Tool/blob/main/LICENSE)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 It's a simple time tracking tool for the purpose to clock in and out your working time.
 
@@ -34,9 +34,26 @@ Design the spreadsheet with the following columns:
 
 ### Usage
 
+#### Automatic Tracking
+
 ![image](https://user-images.githubusercontent.com/103217539/232341225-869e3316-1540-42e6-b125-0b3475d090a9.png)
 
+1. Run the Time-Tracking-Tool.
+2. Activate Automatic Tracking.
+3. The tool will monitor the specified program (e.g., `thunderbird.exe`).
+4. When the program is active, the tool will automatically clock in and update the correspondig column in the spreadsheet
+5. When the program is closed, the tool will automatically clock out and update the correspondig column in the spreadsheet
+
+#### Manual Tracking
+
 ![image](https://user-images.githubusercontent.com/103217539/232341229-7400465c-b169-49e5-ac2a-02d60706a101.png)
+
+1. Run the Time-Tracking-Tool.
+2. Clock In/Out as you like, the tool will automatically update the correspondig column in the spreadsheet.
+
+#### Exit
+
+Quits the program.
 
 
 <a href="https://www.flaticon.com/free-icons/time" title="time icons">Time icons created by Freepik - Flaticon</a>
