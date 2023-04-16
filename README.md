@@ -28,9 +28,7 @@ Design the spreadsheet with the following columns:
 
 | date [A1] | clocking in [B1] | clocking out [C1] |
 |------|-------------|--------------|
-| 01.04.23 |
-| **.**  **.**  **.**|
-| 30.04.23 |
+| `%Y-%m-%d` |
 
 ### Usage
 
