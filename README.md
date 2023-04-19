@@ -5,7 +5,7 @@ It's a simple time tracking tool for the purpose to clock in and out your workin
 
 ## How To ... ?
 
-### Setup 
+### Setup
 
 1. Create a `config.json` file in the same directory as the Time-Tracking-Tool.
 2. Add the following configurations to the config.json file:
@@ -38,16 +38,16 @@ Design the spreadsheet with the following columns:
 
 1. Run the Time-Tracking-Tool.
 2. Activate Automatic Tracking.
-3. The tool will monitor the specified program (e.g., `thunderbird.exe`).
-4. When the program is active, the tool will automatically clock in and update the correspondig column in the spreadsheet
-5. When the program is closed, the tool will automatically clock out and update the correspondig column in the spreadsheet
+3. Upon detecting the specified program (e.g., `thunderbird.exe`), the tool begins monitoring.
+4. The tool will automatically clock in when the program is active and clock out when closed.
+5. During clock-in and clock-out events, the corresponding column/row in the spreadsheet will be updated.
 
 #### Manual Tracking
 
 ![image](https://user-images.githubusercontent.com/103217539/232341229-7400465c-b169-49e5-ac2a-02d60706a101.png)
 
 1. Run the Time-Tracking-Tool.
-2. Clock In/Out as you like, the tool will automatically update the correspondig column in the spreadsheet.
+2. Clock in/out as you like, the tool will automatically update the correspondig column/row in the spreadsheet.
 
 #### Exit
 
