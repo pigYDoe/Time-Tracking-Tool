@@ -27,8 +27,8 @@ def monitoring():
 
 def show_info():
     spread_sheet.show_notification(
-        '\U0001F4D3 Setup through a config.json within\n'
-        'the same directory as the tool.'
+        'For more information visit:\n'
+        'https://github.com/pigYDoe/Time-Tracking-Tool'
     )
 
 
