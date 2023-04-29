@@ -37,7 +37,7 @@ Design the spreadsheet with the following columns:
 
 #### Automatic Tracking
 
-![image](https://user-images.githubusercontent.com/103217539/232341225-869e3316-1540-42e6-b125-0b3475d090a9.png)
+![time_tracking_tool_autojpeg](https://user-images.githubusercontent.com/103217539/235324180-cdeda263-e6d6-4fe3-8849-49def6ab4661.jpeg)
 
 1. Run the Time-Tracking-Tool.
 2. Activate Automatic Tracking.
@@ -47,10 +47,14 @@ Design the spreadsheet with the following columns:
 
 #### Manual Tracking
 
-![image](https://user-images.githubusercontent.com/103217539/232341229-7400465c-b169-49e5-ac2a-02d60706a101.png)
+![time_tracking_tool_man](https://user-images.githubusercontent.com/103217539/235324219-d5e5d1c7-44a5-4304-b99e-70cea1623e69.jpeg)
 
 1. Run the Time-Tracking-Tool.
 2. Clock in/out as you like, the tool will automatically update the correspondig column/row in the spreadsheet.
+
+#### Info
+
+Link to repository.
 
 #### Exit
 
