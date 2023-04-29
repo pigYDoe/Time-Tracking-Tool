@@ -23,6 +23,10 @@ def convert_time_format(time_obj):
     return time_obj.strftime(output_format)
 
 
+def strip_cell_value(cell_value):
+    return cell_value[2:7].replace('H', ':')
+
+
 def show_notification(message):
     notification.notify(
         title='Time Tracking Tool',
@@ -45,7 +49,9 @@ def get_index(file_path, current_date):
         if date_in_column == current_date:
             return index
 
-    show_notification('\u26D4 No date index matched: check your spread sheet!')
+    show_notification(
+        '\u26D4 No date index matched: check your spread sheet!'
+    )
     return None
 
 
@@ -61,12 +67,16 @@ def write_start_time():
 
     if start_time:
         if sheet[index, 1].value == None:
-            show_notification(f'\U0001F916 Clocking In: {start_time}')
+            show_notification(
+                f'\U0001F916 Clocking In: {start_time.strftime("%H:%M")}'
+            )
             start_time_obj = convert_time_format(start_time)
             sheet[index, 1].set_value(start_time_obj, 'time')
             doc.save()
         else:
-            show_notification(f'\u26D4 Already Clocked In: {sheet[index, 1].value}')
+            show_notification(
+                f'\u26D4 Already Clocked In at: {strip_cell_value(sheet[index, 1].value)}'
+            )
 
 
 def write_end_time():
@@ -81,10 +91,14 @@ def write_end_time():
 
     if end_time:
         if sheet[index, 2].value == None:
-            show_notification(f'\U0001F916 Clocking Out: {end_time}')
+            show_notification(
+                f'\U0001F916 Clocking Out: {end_time.strftime("%H:%M")}'
+            )
             end_time_obj = convert_time_format(end_time)
             sheet[index, 2].set_value(end_time_obj, 'time')
             doc.save()
         else:
-            show_notification(f'\u26D4 Already Clocked Out: {sheet[index, 2].value}')
+            show_notification(
+                f'\u26D4 Already Clocked Out at: {strip_cell_value(sheet[index, 2].value)}'
+            )
 
