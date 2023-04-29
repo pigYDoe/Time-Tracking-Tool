@@ -7,8 +7,12 @@ It's a simple time tracking tool for the purpose to clock in and out your workin
 
 ### Setup
 
-1. Create a `config.json` file in the same directory as the Time-Tracking-Tool.
-2. Add the following configurations to the config.json file:
+1. Clone the repository or download it as archive
+2. Install the required Python packages with:
+
+        pip install -r requirements.txt
+
+3. Adjust the configuration in the `config.json` file:
    * Path to the working time spread sheet ( `.ods` file format)
    * Path to the icon for the Time-Tracking-Tool
    * Name of the program to monitor for automatic clocking
@@ -20,7 +24,6 @@ Here's an example of a `config.json` file:
     "icon_path": "C:/time_tracking/stopwatch.png",
     "program_name": "thunderbird.exe"
 }
-
 ````
 ### Spreadsheet Design
 
