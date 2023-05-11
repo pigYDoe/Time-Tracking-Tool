@@ -14,6 +14,15 @@ def get_config():
     return config
 
 
+def verify_file_path(file_path):
+    if not os.path.exists(file_path):
+        show_notification(
+            '\u26D4 File path does not exist: check your config.json file!'
+        )
+        return False
+    return True
+
+
 def get_current_date():
     return datetime.now().strftime('%Y-%m-%d')
 
@@ -58,47 +67,51 @@ def get_index(file_path, current_date):
 def write_start_time():
     start_time = datetime.now()
     current_date = get_current_date()
+
     config = get_config()
     file_path = config['file_path']
-    index = get_index(file_path, current_date)
+    if verify_file_path(file_path) is True:
+        index = get_index(file_path, current_date)
 
-    doc = ezodf.opendoc(file_path)
-    sheet = doc.sheets[-1]
+        doc = ezodf.opendoc(file_path)
+        sheet = doc.sheets[-1]
 
-    if start_time:
-        if sheet[index, 1].value == None:
-            show_notification(
-                f'\U0001F916 Clocking In: {start_time.strftime("%H:%M")}'
-            )
-            start_time_obj = convert_time_format(start_time)
-            sheet[index, 1].set_value(start_time_obj, 'time')
-            doc.save()
-        else:
-            show_notification(
-                f'\u26D4 Already Clocked In at: {strip_cell_value(sheet[index, 1].value)}'
-            )
+        if start_time:
+            if sheet[index, 1].value == None:
+                show_notification(
+                    f'\U0001F916 Clocking In: {start_time.strftime("%H:%M")}'
+                )
+                start_time_obj = convert_time_format(start_time)
+                sheet[index, 1].set_value(start_time_obj, 'time')
+                doc.save()
+            else:
+                show_notification(
+                    f'\u26D4 Already Clocked In at: {strip_cell_value(sheet[index, 1].value)}'
+                )
 
 
 def write_end_time():
     end_time = datetime.now()
     current_date = get_current_date()
+
     config = get_config()
     file_path = config['file_path']
-    index = get_index(file_path, current_date)
+    if verify_file_path(file_path) is True:
+        index = get_index(file_path, current_date)
 
-    doc = ezodf.opendoc(file_path)
-    sheet = doc.sheets[-1]
+        doc = ezodf.opendoc(file_path)
+        sheet = doc.sheets[-1]
 
-    if end_time:
-        if sheet[index, 2].value == None:
-            show_notification(
-                f'\U0001F916 Clocking Out: {end_time.strftime("%H:%M")}'
-            )
-            end_time_obj = convert_time_format(end_time)
-            sheet[index, 2].set_value(end_time_obj, 'time')
-            doc.save()
-        else:
-            show_notification(
-                f'\u26D4 Already Clocked Out at: {strip_cell_value(sheet[index, 2].value)}'
-            )
+        if end_time:
+            if sheet[index, 2].value == None:
+                show_notification(
+                    f'\U0001F916 Clocking Out: {end_time.strftime("%H:%M")}'
+                )
+                end_time_obj = convert_time_format(end_time)
+                sheet[index, 2].set_value(end_time_obj, 'time')
+                doc.save()
+            else:
+                show_notification(
+                    f'\u26D4 Already Clocked Out at: {strip_cell_value(sheet[index, 2].value)}'
+                )
 
